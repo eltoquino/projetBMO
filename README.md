@@ -1,1 +1,1 @@
-# projetBMO
+# projetBMO Louen Toquin & Joseph Tartivel
