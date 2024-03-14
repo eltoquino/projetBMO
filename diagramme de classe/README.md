@@ -20,7 +20,7 @@ Classes et leurs attributs :
 
 6. Sport : Classe abstraite représentant différents sports. Elle est spécialisée en plusieurs sous-classes telles que Foot, Tennis, Basket, et Course.
 
-7. SetTennis : Représente un ensemble de jeux dans un match de tennis. Il a un numéro de set, un nombre de jeux pour chaque joueur, un nombre de points pour le jeu actuel, et une indication si le set est terminé.
+7. SetTennis : Représente un ensemble de jeux dans un match de tennis. Il a un numéro de set, un nombre de jeux pour chaque joueur, un nombre de points pour le jeu actuel, et une indication si le set est terminé. Nous faisons le choix de créer une classe set afin de représenter le résultat exact du match au jeu près.
 
 8. Cheval : Représente un cheval dans une course hippique. Il a un nom, un numéro et une place dans la course.
 
