@@ -47,3 +47,27 @@ Après la fin de l'événement, le système atteint un point de décision (repr�
 Si le pari est vérifié comme gagnant, la transition mène à l'état PariGagnant.
 Si le pari est vérifié comme perdant, la transition mène à l'état PariPerdant.
 Si l'évennement ou le pari est annulé, la transition mène à l'état PariAnnulé. Exemple "Match annulé".
+
+# Hypothèses
+
+1. Le projet comprend la modélisation des états pour les différentes classes du système de paris en ligne.
+2. Les diagrammes d'états sont utilisés pour représenter les états possibles et les transitions entre eux pour chaque classe.
+3. Chaque classe, notamment Parieur, Bookmaker et Parier, possède ses propres états spécifiques et transitions associées.
+4. Les états initiaux représentent les conditions de départ, tandis que les états finaux ou terminaux indiquent les résultats ou les conditions finales pour chaque processus.
+5. Les transitions entre les états représentent les actions effectuées par les acteurs ou les changements de statut dans le système.
+
+# Interprétation
+
+1. Les diagrammes d'états offrent une vue claire et structurée des processus impliqués dans le système de paris en ligne, en mettant en évidence les différents états possibles pour chaque classe.
+2. Chaque diagramme d'états présente des états initiaux, finaux et intermédiaires pertinents pour le processus spécifique de la classe, ce qui facilite la compréhension des interactions entre les différents composants du système.
+3. Les transitions entre les états décrivent les actions ou les événements qui déclenchent les changements de statut, permettant ainsi de suivre le flux des processus à travers le système.
+4. Les mécanismes de choix, tels que les transitions conditionnelles, sont utilisés pour représenter les décisions prises par le système en fonction des résultats des événements sportifs ou des paris.
+5. Les états et les transitions sont définis de manière à refléter de manière précise les règles métier et les comportements attendus dans le système de paris en ligne.
+
+# Commentaires
+
+1. La modélisation des diagrammes d'états fournit une base solide pour la conception et le développement du système, en guidant les développeurs dans l'implémentation des logiques de traitement et des fonctionnalités spécifiques.
+2. Les diagrammes d'états permettent une visualisation efficace des processus et des flux de données à travers le système, facilitant ainsi la communication entre les membres de l'équipe de développement.
+3. Les mécanismes de choix ajoutent une flexibilité au modèle en permettant au système de prendre des décisions en fonction des conditions spécifiques, améliorant ainsi la robustesse et l'adaptabilité du système.
+4. La clarté des états et des transitions facilite également la documentation des fonctionnalités du système, ce qui est essentiel pour la maintenance et l'évolution future de la plateforme de paris en ligne.
+5. Les diagrammes d'états contribuent à garantir la cohérence et la fiabilité du système en décrivant de manière précise les comportements attendus et les règles de gestion à suivre dans différentes situations.
