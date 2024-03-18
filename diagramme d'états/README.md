@@ -2,7 +2,7 @@
 
 Ce document explique les diagrammes d'états créés pour les différentes classes du système de paris en ligne.
 
-Parieur
+**Parieur**
 Le diagramme d'états pour la classe Parieur présente les états possibles et les transitions entre eux :
 
 Non connecté: Cet état représente le parieur qui n'est pas connecté au système.
@@ -14,7 +14,7 @@ Les transitions possibles sont les suivantes :
 Login: Transition de l'état "Non connecté" à l'état "Connecté" lorsque le parieur se connecte avec succès.
 Logout: Transition de l'état "Connecté" à l'état "Non connecté" lorsque le parieur se déconnecte du système.
 
-Bookmaker
+**Bookmaker**
 Le diagramme d'états pour la classe Bookmaker est similaire à celui du Parieur :
 
 Non connecté: Cet état représente le bookmaker qui n'est pas connecté au système.
@@ -23,7 +23,7 @@ L'initialState peut ici représenter l'état avant la création du compte
 
 Les transitions possibles sont les mêmes que pour la classe Parieur : "Login" et "Logout".
 
-Parier
+**Parier**
 Ce diagramme d'état modélise le processus de pari dans le système de paris en ligne, depuis la création de l'événement jusqu'à la détermination du résultat du pari.
 
 EventPasCommencé : L'état initial avant le début de l'événement sportif. Les paris peuvent être placés à ce stade.

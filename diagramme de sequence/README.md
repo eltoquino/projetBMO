@@ -1,6 +1,6 @@
 # projetBMO Louen Toquin & Joseph Tartivel
 
-Pour des raisons de simplification nous avons modéliser les cas nomianaux et exceptionnels dans un seul diagramme. Ceux ci sont modélisés à l'aide d'un "alt".
+Pour des raisons de simplification nous avons modéliser les cas nomianaux et exceptionnels dans un seul diagramme. Ceux ci sont modélisés à l'aide d'un "alt". Sauf pour le rechargement, composé de deux diagrammes de séquences.
 
 
 **Consultation des Paris:**
@@ -89,3 +89,66 @@ Après la mise à jour (réussite ou non) l'utilisateur quitte l'inscription.
 
 Conclusion
 Le diagramme de séquence s'assure que le processus de mise à jour est clair et gère les cas où les informations ne sont pas correctes, en assurant un retour d'information adéquat et en permettant au bookmaker de corriger les erreurs pour compléter la maj.
+
+**Placer un Pari**
+
+Acteurs
+Parieur : Utilisateur du système qui placer un pari.
+Système Paris en ligne : Plateforme numérique où les parieurs peuvent placer des paris sur des évennements sportifs.
+
+Flux Principal
+L'Utilisateur initie le processus en selectionnant un évennement sportif.
+Le Système affiche les détails de l'évennement et les options de paris.
+L'Utilisateur selectionne les infos du pari.
+Le Système verifie la validité du pari.
+
+Cas exceptionnel - Match commencé
+
+Si le match est commencé et que le pari choisi nécessite d'être placé avant le début du match alors suite à la verification, le système envoie un message d'erreur indiquant que le pari est impossible, invitant alors l'utilisateur à quitter l'interface de pari.
+
+Cas nominal - Match non commencé
+
+Si le  pari est validé par le systeme alors il est enregistré et le systeme envoie un récapitulatif du pari ainsi qu'une confirmation à l'utilisateur.
+
+Après cela l'utilisateur quitte l'interface de pari et retourne à la page d'acceuil.
+
+Conclusion
+Le diagramme de séquence s'assure que le processus de placement de pari est clair et gère les cas où les informations ne sont pas correctes, en assurant un retour d'information adéquat et en permettant au bookmaker de s'assurer qu'aucun pari frauduleux ne peux être placé.
+
+**Rechargement - Cas nominal**
+
+Acteurs
+Utilisateur : Utilisateur du système qui souhaite recharger son compte
+Système Paris en ligne : Plateforme numérique où les parieurs peuvent recharger leur compte de façon sécurisé.
+Banque : Plateforme numérique de la banque du client, validant ou non les virements de l'utilisateur vers le systeme de paris en ligne.
+
+Flux Principal
+L'Utilisateur initie le processus en demandant un rechargement.
+Le Système affiche le formulaire sécurisé de rechargement.
+Le systeme envoie les informations à la banque, sans pouvoir les consulter.
+Le banque verifie la validité des informations et la faisabilité du virement.
+La banque valide le virement et l'indique au systeme.
+Le systeme recharge le compte et indique le succes à l'utilisateur.
+L'utilisateur quitte la page ou la recharge pour recommencer.
+
+Conclusion
+Le diagramme de séquence s'assure que le processus de rechargement est clair et sécurisé pour les 3 acteurs.
+
+**Rechargement - Cas exeptionnel**
+
+Acteurs
+Utilisateur : Utilisateur du système qui souhaite recharger son compte
+Système Paris en ligne : Plateforme numérique où les parieurs peuvent recharger leur compte de façon sécurisé.
+Banque : Plateforme numérique de la banque du client, validant ou non les virements de l'utilisateur vers le systeme de paris en ligne.
+
+Flux Principal
+L'Utilisateur initie le processus en demandant un rechargement.
+Le Système affiche le formulaire sécurisé de rechargement.
+Le systeme envoie les informations à la banque, sans pouvoir les consulter.
+Le banque verifie la validité des informations et la faisabilité du virement.
+La banque indique au systeme que le virement est impossible.
+Le systeme indique à l'utilisateur que le virement a été refusé par la banque.
+L'utilisateur quitte la page ou la recharge pour recommencer.
+
+Conclusion
+Le diagramme de séquence s'assure que le processus de rechargement est clair et sécurisé pour les 3 acteurs, même en cas d'erreur.
