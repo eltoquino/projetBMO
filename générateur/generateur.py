@@ -166,7 +166,7 @@ def generate_java_class(class_name, attributes):
     
     for visibility, attr_type, attr_name in attributes:
         adjusted_type = adjust_type(attr_type)
-        java_code += f'    @Column\n    private {attr_name} {adjusted_type};\n\n'
+        java_code += f'    private {attr_name} {adjusted_type};\n\n'
         
     # Générer les getters et setters
     for visibility, attr_type, attr_name in attributes:
