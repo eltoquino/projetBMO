@@ -21,4 +21,3 @@ Le script lit un texte DotUML, recherche les déclarations de classes et d'attri
 Le script ne gère pas toutes les nuances et caractéristiques de la notation DotUML.
 Les relations entre les classes (par exemple, les associations, les héritages) ne sont pas prises en compte dans la génération du code.
 Nous avons pas réussi à générer les classes abstraite elle sont mise comme "public"
-le changement des type de variables n'est pas effectif. Par exemple, les type string -> String ou bool -> bollean ne fonctionne pas 
