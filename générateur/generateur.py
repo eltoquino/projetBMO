@@ -173,7 +173,7 @@ def generate_java_class(class_name, attributes):
         adjusted_type = adjust_type(attr_name)
         cap_attr_name = attr_type[0].upper() + attr_type[1:]
         java_code += f'    public {attr_name} get{cap_attr_name}() {{\n        return {attr_type};\n    }}\n\n'
-        java_code += f'    public void set{cap_attr_name}({attr_name} {adjusted_type}) {{\n        this.{attr_type} = {attr_type};\n    }}\n\n'
+        java_code += f'    public void set{cap_attr_name}({attr_name} {attr_type}) {{\n        this.{attr_type} = {attr_type};\n    }}\n\n'
     
     java_code += '}\n'
     return java_code
